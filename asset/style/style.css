@@ -1,0 +1,185 @@
+/* ---------------------FONTS---------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+/* ---------------------VAR------------------------ */
+:root{
+    --Josefin:'Josefin Sans', sans-serif;
+/* ### Primary */
+--Desaturated_Red: hsl(0, 36%, 70%);
+--Soft_Red: hsl(0, 93%, 68%);
+/* ### Neutral */
+--Dark_Grayish_Red: hsl(0, 6%, 24%);
+/* ### Gradients */
+--Linear:hsl(0, 0%, 100%);
+--Lineartwo:  hsl(0, 100%, 98%);
+--LinearThree: hsl(0, 80%, 86%);
+--LinearFour: hsl(0, 74%, 74%);
+}
+/* ---------------------ALL----------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border:  1px solid red; */
+}
+body{
+    font-size: 16px;
+    font-family: var(--Josefin);
+    font-weight: 400;
+   
+}
+/* ---------------------MAIN----------------------- */
+.container{
+    height: 800px;
+    width:  375px;
+    margin: 2rem auto 5.5rem auto;
+    background-color: var(--Linear);
+    overflow: hidden;
+}
+ .contac__header{
+    height:20.5rem;
+    width: 100%;
+}
+.contact__header__logo{
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    height: 1.8rem;
+    width: 7rem;
+}
+.contact__header__hero{
+    width: 100%;
+    height: 17rem;
+    /* object-fit: contain; */
+}
+.contac_main{
+    width: 100%;
+    min-height: 29rem;
+    padding: 3.5rem 2rem 4rem 2rem;
+}
+.contac__main__title{
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    text-align: center;
+    color: var(--Dark_Grayish_Red);
+    text-transform: uppercase;
+}
+.contact__main__title--gradient{
+    
+    color: var(--Desaturated_Red);
+    font-weight: 300;
+    letter-spacing: 10px;
+}
+.contac__main__decription{
+    text-align: center;
+    color:var(--Desaturated_Red);
+    margin-top: 2rem;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.contact__main__form{
+   
+    width: 19rem;
+    height: 3rem;
+    margin:auto;
+    position: relative;
+}
+.contact__main__form--input{
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    padding-left: 1rem;
+    border: 1px solid var(--Desaturated_Red) ;
+    outline: none;
+    /* background-image:url(../img/hero-mobile.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: 15rem 0rem; */
+    position: absolute;
+}
+.contact__main__form--input::placeholder{
+   color: var(--Desaturated_Red) ;
+}
+.contact__main__form--btn{
+    position: absolute;
+    right:         0;
+    width:         4rem;
+    height:        3rem;
+    border-radius: 3rem;
+    padding:       10px 20px;
+   background: linear-gradient(135deg,var(--LinearThree),var(--LinearFour));
+}
+.contact__main__form--btn:hover{
+    background: linear-gradient(135deg, var(--Lineartwo), var(--LinearFour));
+    box-shadow: 0 1rem 1rem var(--LinearFour);
+}
+.contact__main__form--error{
+    font-size: 1rem;
+    margin: 1rem 0 0 1rem;
+    color: var(--Soft_Red);
+
+}
+/* ---------------------FOOTER--------------------- */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media(min-width:1400px){
+    body{
+        font-size: 32px;
+    }
+    .container{
+        height:  800px;
+        width:   1440px;
+       display:  flex;
+       position: relative;
+      margin:    0;
+    }
+    .contac__header{
+        width:      100%;
+        height:     800px;
+        object-fit: cover;
+    }
+    .contact__header__logo{
+        height:   3rem;
+        width:    10rem;
+        position: absolute;
+        left:     16rem;
+        top:      5rem;
+    }
+    .contact__header__hero{
+        content: url(../img/hero-desktop.jpg);
+        width:   100%;
+        height:  100%;              
+    }
+    .contac_main{
+        order:   -1;
+        padding: 10rem;
+        
+    }
+    .contac__main__title{
+        font-size: 4rem;
+
+    }
+    .contac__main__decription{
+        font-size: 1.5rem;
+    }
+    .contact__main__form{
+        width: 28rem;
+        height: 3rem;
+        margin:auto;
+        position: relative;
+    }
+    .contact__main__form{
+        height: 4rem;
+        
+    }
+    .contact__main__form--btn{
+        height:        4rem;
+        border-radius: 4rem;
+        width: 5rem;
+    }
+    .contact__main__form--input{
+        background-position: 15rem 1rem;    
+    }
+    
+    } 
